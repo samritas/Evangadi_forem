@@ -1,0 +1,53 @@
+.landig_page{
+  background-image: url(https://www.evangadi.com/themes/humans/assets/images/misc/bg-svg-f.svg);
+  background-size: cover;
+}
+
+.landig_content{
+    display: flex;
+    /* background-color: #f8f8f8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    font-weight:200;
+    /* font-family: 'Roboto', sans-serif; */
+    
+}
+.about{
+  width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    /* margin-left: -40px;  */
+    color:  #4b456f;
+    font-size: 14px;
+}
+.about h4{
+  color:  rgba(255, 157, 0, 0.897);;
+}
+
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .button_last{
+    background-color: rgba(255, 157, 0, 0.897);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+  }
+
+  
+  @media (max-width: 768px) {
+    .landig_page {
+      width: 100%; /* Make them full width on smaller screens */
+    }
+  }

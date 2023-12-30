@@ -1,0 +1,37 @@
+
+  .footer_elements h3{
+    color: white;
+  }
+  .footer_elements a{
+    color: #ffffff34;
+  }
+
+  /* Add this CSS to your component or stylesheet */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #3b455a; /* Set your background color here */
+  /* color: #ffffff34;Set your text color here */
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
+}
+
+.footer_elements {
+  text-align: center;
+  margin: 10px;
+}
+
+.footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+ 
+  

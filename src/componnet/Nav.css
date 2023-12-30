@@ -1,0 +1,55 @@
+.nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff; /* Set your background color here */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the bottom */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Set a higher z-index to ensure it's above other elements on the page */
+  padding-bottom: 20px;
+  }
+  
+  .nav_contents {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_contents a{
+    color: #686767;
+    margin-right: 10px;
+  }
+  
+  img {
+    max-width: 150px; /* Adjust the maximum width of the logo */
+    margin-right: 20px; /* Add space between the logo and navigation links */
+  }
+  
+  Link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  Link:last-child {
+    margin-right: 0px; /* Remove margin for the last link */
+  }
+  
+  button.signin-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    width: 200px; /* Set the width of the "Sign In" button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 15px; /* Add space between the last link and the button */
+  }
+  button.signin-button:hover{
+    background-color: rgba(255, 157, 0, 0.897);
+  }
+  

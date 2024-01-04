@@ -60,6 +60,8 @@ a{
     button:hover{
       background-color:  rgba(255, 157, 0, 0.897);
     }
-
+.password_section{
+  display: flex;
+}
     
     

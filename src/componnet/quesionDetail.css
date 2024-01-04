@@ -5,3 +5,56 @@
     margin-left: auto;
     
 }
+ 
+.horizontal-line {
+    width: 100%;
+    border: 1px solid #ddd; /* Adjust border color as needed */
+  }
+  .TheAnswer{
+    display: flex;
+  }
+  .username{
+    margin-right: 30px;
+  }
+
+  /* YourComponent.css */
+.answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   /* Adjust the height based on your layout */
+  }
+  
+  .answer h1,
+  .answer p {
+    text-align: center;
+  }
+  /* YourComponent.css */
+  
+  
+.wide-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: top; /* Align placeholder text to the top */
+    height: 100px;
+
+  }
+  
+  .post-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    width: 200px; /* Set the width of the "Sign In" button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Add space between the last link and the button */
+  }
+  
+  .post-button:hover {
+      background-color: rgba(255, 157, 0, 0.897);
+  }
+  
+  

@@ -14,13 +14,17 @@ function Home() {
       const navigateToQuestionDetail = () => {
         navigate('/questionDetail'); // Replace '/questionDetail' with the actual route of your question detail page
       };
+
+      const navigateToAskquestion = () => {
+        navigate('/askquestion'); // Replace '/questionDetail' with the actual route of your question detail page
+      };
   return (
     <div>
       <NavBar  isSignIn=""/>
     <div className='home'>
       <div className='centered-container'>
         <div className='askQuestion'>
-          <button className='blue-button'>Ask Question</button>
+          <button className='blue-button' onClick={navigateToAskquestion}>Ask Question</button>
           <p>Welcome: user</p>
         </div>
             <p>Questions</p>
@@ -30,9 +34,10 @@ function Home() {
           <AccountCircleIcon style={iconStyle} className='icon user' />
             <p>username</p>
           </div>
-          <p>what is git hub?</p>
+          <p>what is react dom?</p>
           <ChevronRightIcon className='icon' onClick={navigateToQuestionDetail} />
         </div>
+        
         <hr className='horizontal-line' />
       </div>
     </div>

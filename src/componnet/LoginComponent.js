@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useRef } from 'react';
+import axios from './axiosConfig'
 function LoginComponent() {
 
   const useremail=useRef(null)
@@ -29,14 +30,94 @@ function LoginComponent() {
   };
   const navigate=useNavigate()
 
-
-  const handlesubmit=(e)=>{
+  
+  const handleRegister = async (e) => {
+  
     e.preventDefault();
-    // navigate("/home")
-    console.log(useremail.current.value)
-    console.log(userfirstname.current.value)
-    console.log(userlastname.current.value)
-  }
+//     // navigate("/home")
+
+const usernamevalue=username.current.value
+const useremailvalue=useremail.current.value
+const userfirsnamevalue=userfirstname.current.value
+const userlastnamevalue=userlastname.current.value
+const userpasswordvalue=userpassword.current.value
+
+if (
+  !userfirstname||
+  !useremailvalue||
+  !userlastnamevalue||
+  !userpasswordvalue||
+  !usernamevalue
+){
+  alert("please provide all requirement")
+  return
+}
+
+try {
+  await axios.post('/users/register',{
+    username:usernamevalue,
+    firstname:userfirsnamevalue,
+    lastname:userlastnamevalue,
+    password:userpasswordvalue,
+    email:useremailvalue
+  
+  });
+  alert("sign up siccefully")
+  navigate("/home")
+  // Handle the response if needed
+  
+} catch (error) {
+  // Handle the error
+  console.error('Error:', error.response);
+console.log('hello')
+  
+}
+
+  };
+  
+
+// login
+
+ 
+const handleLogin = async (e) => {
+  
+  e.preventDefault();
+//     // navigate("/home")
+
+const useremailvalue=useremail.current.value
+const userpasswordvalue=userpassword.current.value
+
+if (!useremailvalue||!userpasswordvalue){
+alert("please provide all requirement")
+return
+}
+
+try {
+await axios.post('/users/login',{
+  password:userpasswordvalue,
+  email:useremailvalue
+
+});
+alert("login siccefully")
+navigate("/home")
+// Handle the response if needed
+
+} catch (error) {
+// Handle the error
+console.error('Error:', error);
+alert("check your email or password")
+}
+
+};
+
+
+
+
+
+
+
+
+
 
   
   return (
@@ -48,15 +129,18 @@ function LoginComponent() {
       <p className="create-account-text">
         Do you have an account?<Link onClick={toggleForm}>Create a new account</Link>
       </p>
-      <form className="login-form" onSubmit={handlesubmit}>
-        <input type="email" id="email" name="email" placeholder="Email"  required />
+
+      <form className="login-form"  onSubmit={handleLogin}>
+        <input type="email" id="email" name="email" placeholder="Email"  ref={useremail} required />
         <div className='password_section'>
         <input
           type={showPassword ? 'text' : 'password'}
           id="password"
           name="password"
           placeholder="Enter your password"
+          ref={userpassword}
           required
+        
         />
         <span id="showPassword" onClick={togglePasswordVisibility}>
           {showPassword ? <VisibilityOffIcon/> : <VisibilityIcon/>}
@@ -75,7 +159,7 @@ function LoginComponent() {
    <p className="create-account-text">
     Already have an account?<Link onClick={reversLoginForm}>sign in</Link>
    </p>
-   <form className="login-form" onSubmit={handlesubmit}>
+   <form className="login-form" onSubmit={handleRegister}>
      <input type="email" id="email" name="email" placeholder="Email" ref={useremail} required />
      <div className='full_name'>
      <input type="text" id="fristname" name="firstname" placeholder="First name" ref={userfirstname} required />

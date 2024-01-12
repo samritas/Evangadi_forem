@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Evangadi_forem/static/css/main.f311c6ac.css",
-    "main.js": "/Evangadi_forem/static/js/main.075e8120.js",
+    "main.css": "/Evangadi_forem/static/css/main.7518f120.css",
+    "main.js": "/Evangadi_forem/static/js/main.c4e976b6.js",
     "static/js/787.c2e3a921.chunk.js": "/Evangadi_forem/static/js/787.c2e3a921.chunk.js",
     "static/media/logo.svg": "/Evangadi_forem/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Evangadi_forem/index.html",
-    "main.f311c6ac.css.map": "/Evangadi_forem/static/css/main.f311c6ac.css.map",
-    "main.075e8120.js.map": "/Evangadi_forem/static/js/main.075e8120.js.map",
+    "main.7518f120.css.map": "/Evangadi_forem/static/css/main.7518f120.css.map",
+    "main.c4e976b6.js.map": "/Evangadi_forem/static/js/main.c4e976b6.js.map",
     "787.c2e3a921.chunk.js.map": "/Evangadi_forem/static/js/787.c2e3a921.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f311c6ac.css",
-    "static/js/main.075e8120.js"
+    "static/css/main.7518f120.css",
+    "static/js/main.c4e976b6.js"
   ]
 }

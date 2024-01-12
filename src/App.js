@@ -33,15 +33,18 @@ function App() {
 
   return (
     <div className='App'>
-      <Router>
+    <Router  basename="/Evangadi_forem">
+
         <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='/home' element={<Home />} />
           <Route path='/questionDetail' element={<QuesionDetail />} />
           <Route path='/askquestion' element={<AskQuestion />} />
         </Routes>
-      </Router>
-    </div>
+
+    </Router>
+       
+       </div>
   );
 }
 

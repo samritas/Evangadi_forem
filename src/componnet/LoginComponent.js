@@ -133,7 +133,7 @@ alert("check your email or password")
 
       <form className="login-form"  onSubmit={handleLogin}>
         <input type="email" id="email" name="email" placeholder="Email"  ref={useremail} required />
-        <div className='password_section'>
+        
         <input
           type={showPassword ? 'text' : 'password'}
           id="password"
@@ -143,10 +143,7 @@ alert("check your email or password")
           required
         
         />
-        <span id="showPassword" onClick={togglePasswordVisibility}>
-          {showPassword ? <VisibilityOffIcon/> : <VisibilityIcon/>}
-        </span>
-        </div>
+     
         <button   className='button' type="submit">Submit</button>
       </form>
 

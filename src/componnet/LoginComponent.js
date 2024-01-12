@@ -93,13 +93,14 @@ return
 }
 
 try {
-await axios.post('/users/login',{
+const {data} = await axios.post('/users/login',{
   password:userpasswordvalue,
   email:useremailvalue
 
 });
 alert("login siccefully")
 navigate("/home")
+localStorage.setItem("tocken",data.token)
 // Handle the response if needed
 
 } catch (error) {
